@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "../components/aspect-ui/aspect-ui.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #eeeff1;
+  --text: #1b1b1d;
+  --text-muted: #64646a;
+  --background-hover: #f3f4f5;
+}
+/* *{outline: 1px solid red;} */
+
+
+@theme{
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-background-hover: var(--background-hover);
+}
+
+.dark {
+  --background: #1b1b1d;
+  --text: #eeeff1;
+  --background-hover: #212125;
+}
+
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
